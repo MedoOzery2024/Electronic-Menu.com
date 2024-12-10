@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شركة الأطيبان A.M.B لتمور الوادي</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Login Page -->
+    <div id="loginPage" class="page">
+        <div class="login-container">
+            <div class="company-header">
+                <img src="img1.png" alt="شعار الشركة" class="logo">
+                <h1>شركة الأطيبان A.M.B لتمور الوادي</h1>
+            </div>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">اسم المستخدم:</label>
+                    <input type="text" id="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">كلمة المرور:</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit">تسجيل الدخول</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Main Page -->
+    <div id="mainPage" class="page hidden">
+        <header>
+            <div class="company-header">
+                <img src="img1.png" alt="شعار الشركة" class="logo">
+                <h1> مرحبا بكم في شركة الأطيبان لتمور الوادي</h1>
+                <h1>شركة الأطيبان A.M.B لتمور الوادي</h1>
+            </div>
+            <button id="printBtn" class="print-button">طباعة القائمة</button>
+        </header>
+
+        <main>
+            <div class="menu-container">
+                <button id="mainMenuBtn" class="main-menu-btn">قائمة الأصناف</button>
+                
+                <div id="subMenu" class="sub-menu hidden">
+                    <button class="product-btn" data-product="dates-box">علبة تمر</button>
+                    <button class="product-btn" data-product="ajwa-box">علبة عجوة</button>
+                    <button class="product-btn" data-product="dates-juice">عصير تمر</button>
+                    <button class="product-btn" data-product="dates-biscuits">بسكوت بالتمر</button>
+                </div>
+
+                <div id="productDetails" class="product-details hidden">
+                    <h2 id="productName"></h2>
+                    <div class="product-form">
+                        <label for="packageType">نوع العبوة:</label>
+                        <select id="packageType">
+                            <option value="box">علب</option>
+                            <option value="bag">أكياس</option>
+                            <option value="kilo">كيلو</option>
+                        </select>
+                        <div class="price-input">
+                            <label for="manualPrice">السعر:</label>
+                            <input type="number" id="manualPrice" min="0" step="0.5">
+                            <button id="calculatePrice" class="calc-button">حساب السعر</button>
+                        </div>
+                        <div class="price-display">
+                            <span>السعر:</span>
+                            <span id="price">0</span>
+                            <span>جنيه مصري</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
